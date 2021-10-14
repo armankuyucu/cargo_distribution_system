@@ -9,6 +9,7 @@ module com.example.yazlab1_proje1 {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.sql;
 
     opens com.example.yazlab1_proje1 to javafx.fxml;
     exports com.example.yazlab1_proje1;
