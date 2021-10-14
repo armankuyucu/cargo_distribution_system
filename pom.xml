@@ -14,6 +14,13 @@
         <junit.version>5.7.1</junit.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>com.teamdev</id>
+            <url>https://europe-maven.pkg.dev/jxbrowser/releases</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -96,6 +103,19 @@
             <artifactId>mssql-jdbc</artifactId>
             <version>9.4.0.jre16</version>
         </dependency>
+        <dependency>
+            <groupId>com.teamdev.jxbrowser</groupId>
+            <artifactId>jxbrowser-cross-platform</artifactId>
+            <version>7.19</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>com.teamdev.jxbrowser</groupId>
+            <artifactId>jxbrowser-javafx</artifactId>
+            <version>7.19</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
