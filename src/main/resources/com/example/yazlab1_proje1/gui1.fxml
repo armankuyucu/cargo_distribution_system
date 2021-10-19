@@ -20,12 +20,25 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="MyLabel" alignment="CENTER" layoutY="82.0" prefHeight="51.0" prefWidth="600.0" text="Login">
+      <Label alignment="CENTER" layoutY="82.0" prefHeight="51.0" prefWidth="600.0" text="Login">
          <font>
-            <Font size="35.0" />
+            <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="submitButton" layoutX="273.0" layoutY="287.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
-      <Button layoutX="389.0" layoutY="235.0" mnemonicParsing="false" onAction="#switchTochangePassword" text="Change password" />
+      <Button fx:id="submitButton" layoutX="273.0" layoutY="287.0" mnemonicParsing="false" onAction="#submit" text="Submit">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="400.0" layoutY="235.0" mnemonicParsing="false" onAction="#switchToChangePassword" text="Change password" />
+      <Label fx:id="MyLabel" alignment="CENTER" layoutY="345.0" prefHeight="30.0" prefWidth="601.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="400.0" layoutY="96.0" mnemonicParsing="false" onAction="#switchToSignUp" text="Sign Up">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

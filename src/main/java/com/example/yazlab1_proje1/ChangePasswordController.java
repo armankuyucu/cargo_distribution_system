@@ -40,7 +40,7 @@ public class ChangePasswordController {
                     && !newPasswordTextField.getText().trim().isEmpty()) {
                 Statement statement2 = Application.connection.createStatement();
 
-                String updatePassword = "Update users set password = '" + newPasswordTextField.getText() + "'";
+                String updatePassword = "Update users set password = '" + newPasswordTextField.getText() +"' ";
                 statement2.executeUpdate(updatePassword);
                 StatusLabel.setText("Password change is successful!");
             } else if (newPasswordTextField.getText().trim().isEmpty()) {
