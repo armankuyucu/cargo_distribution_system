@@ -37,13 +37,13 @@ public class SignUpController {
             }
 
             if (!usernameDB.equals(userNameTextField.getText()) && !userNameTextField.getText().trim().isEmpty()
-                    && !usernameDB.equals(userNameTextField.getText())) {
+                    && !passwordTextField.getText().trim().isEmpty() && !usernameDB.equals(userNameTextField.getText())) {
 
                 PreparedStatement postData = Application.connection.prepareStatement("insert into users values( '" + userNameTextField.getText() + "','" + passwordTextField.getText() + "')");
                 postData.executeUpdate();
                 statusLabel.setText("User added!");
-            } else if (userNameTextField.getText().trim().isEmpty()) {
-                statusLabel.setText("Username field can't be empty!");
+            } else if (userNameTextField.getText().trim().isEmpty() || passwordTextField.getText().trim().isEmpty()) {
+                statusLabel.setText("Username or password field can't be empty!");
             } else if (usernameDB.equals(userNameTextField.getText())) {
                 statusLabel.setText("Username is already taken!");
             }
