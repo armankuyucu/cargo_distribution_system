@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="ortools-win32-x86-64-9.1.9490">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../or-tools_VisualStudio2019-64bit_v9.1.9490/ortools-win32-x86-64-9.1.9490.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../or-tools_VisualStudio2019-64bit_v9.1.9490/ortools-win32-x86-64-9.1.9490-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../or-tools_VisualStudio2019-64bit_v9.1.9490/ortools-java-9.1.9490.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../or-tools_VisualStudio2019-64bit_v9.1.9490/ortools-java-9.1.9490-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -25,12 +25,12 @@ public class Controller {
     String username;
     String password;
 
-    private Stage stage, stage2;
-    private Scene scene, scene2;
-    private Parent root, root2;
+    private Stage stage, stage2, stage3;
+    private Scene scene, scene2, scene3;
+    private Parent root, root2, root3;
 
 
-    public void submit() {
+    public void submit(ActionEvent event) throws IOException {
         username = UsernameTextField.getText();
         password = PasswordTextField.getText();
         //String usernameDB = null;
@@ -50,6 +50,7 @@ public class Controller {
         for (int j = 0; j < usernameDB.size(); j++) {
             if ((username.equals(usernameDB.get(j))) && (password.equals(passwordDB.get(j))) && !UsernameTextField.getText().isEmpty()) {
                 MyLabel.setText("Logged in");
+                switchToNextScene(event);
                 break;
             } else if (UsernameTextField.getText().isEmpty() || PasswordTextField.getText().isEmpty()) {
                 MyLabel.setText("Username or password field can't be empty!");
@@ -59,7 +60,14 @@ public class Controller {
                 MyLabel.setText("Please check your credentials and try again.");
             }
         }
+    }
 
+    public void switchToNextScene(ActionEvent event) throws IOException{
+        root3 = FXMLLoader.load(getClass().getResource("cargo-add.fxml"));
+        stage3 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene3 = new Scene(root3);
+        stage3.setScene(scene3);
+        stage3.show();
     }
 
     public void switchToChangePassword(ActionEvent event) throws IOException {

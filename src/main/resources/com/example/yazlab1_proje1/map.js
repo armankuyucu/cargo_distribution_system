@@ -16,27 +16,30 @@ function initMap() {
         });
     }
 
+    let locationLat = window.java.getLocationLatToJS();
+
 
     //Create a directions service
     var directionsService = new google.maps.DirectionsService();
 
-    //Create a DirectionsRenderer object which we will use to display the rout
+    //Create a DirectionsRenderer object which we will use to display the route
     var directionsDisplay = new google.maps.DirectionsRenderer();
 
     //bind the DirectionsRenderer to the map
     directionsDisplay.setMap(map);
 
-    let marker1,marker2;
+    let marker1, marker2;
     let counter = 0;
 
     google.maps.event.addListener(map, 'rightclick', function (event) {
-        if(counter == 0){
-            marker1=event.latLng;
-        }else if(counter == 1){
+        if (counter == 0) {
+            marker1 = event.latLng;
+        } else if (counter == 1) {
             marker2 = event.latLng;
             calcRoute();
         }
         addMarker(event.latLng);
+        //alert(window.java.getLocationLngToJS() + ", " + windows.java.getLocationLatToJS());
         counter++;
     });
 
@@ -48,6 +51,7 @@ function initMap() {
             destination: end,
             travelMode: google.maps.TravelMode.DRIVING
         };
+        //Pass the request to the route method
         directionsService.route(request, function (response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
                 directionsDisplay.setDirections(response);

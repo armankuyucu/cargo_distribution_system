@@ -1,6 +1,8 @@
 package com.example.yazlab1_proje1;
 
+import com.teamdev.jxbrowser.browser.callback.InjectJsCallback;
 import com.teamdev.jxbrowser.engine.RenderingMode;
+import com.teamdev.jxbrowser.js.JsObject;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
@@ -20,12 +22,14 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+
 import static com.teamdev.jxbrowser.engine.RenderingMode.HARDWARE_ACCELERATED;
 //JwBrowser imports
 
 public class Application extends javafx.application.Application {
     private static final Logger log = Logger.getLogger(Application.class.getName());
     public static Connection connection;
+    public static Double locationLatToJS , locationLngToJS;
 
     @Override
     public void start(Stage stage2) {
@@ -41,6 +45,14 @@ public class Application extends javafx.application.Application {
 
             Browser browser = engine.newBrowser();
             BrowserView view = BrowserView.newInstance(browser);
+
+            //Inject an instance of the Java object into JavaScript before JavaScript is executed on the loaded web page
+            browser.set(InjectJsCallback.class, params -> {
+                JsObject window = params.frame().executeJavaScript("window");
+                window.putProperty("java", new CargoController());
+                return InjectJsCallback.Response.proceed();
+            });
+
 
             //TextField addressBar = new TextField("https://html5test.com");
             // addressBar.setOnAction(event -> browser.navigation().loadUrl(addressBar.getText()));

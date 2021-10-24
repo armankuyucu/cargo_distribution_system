@@ -12,6 +12,7 @@ module com.example.yazlab1_proje1 {
     requires java.sql;
     requires jxbrowser;
     requires jxbrowser.javafx;
+    requires ortools.java;
 
     opens com.example.yazlab1_proje1 to javafx.fxml;
     exports com.example.yazlab1_proje1;

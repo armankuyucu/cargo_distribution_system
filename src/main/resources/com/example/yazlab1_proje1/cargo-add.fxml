@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yazlab1_proje1.CargoController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="62.0" prefHeight="27.0" prefWidth="516.0" text="Add cargos">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="locationLatTF" layoutX="184.0" layoutY="148.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="80.0" layoutY="153.0" text="Location Lat">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customerNameTF" layoutX="184.0" layoutY="259.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="69.0" layoutY="264.0" text="Customer name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutY="297.0" prefHeight="20.0" prefWidth="516.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="236.0" layoutY="325.0" mnemonicParsing="false" onAction="#addCargo" text="Add">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="locationLngTF" layoutX="184.0" layoutY="202.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="81.0" layoutY="207.0" text="Location Lng">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -55,6 +55,20 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../or-tools_VisualStudio2019-64bit_v9.1.9490/ortools-win32-x86-64-9.1.9490.jar!/" />
+          <root url="jar://$MODULE_DIR$/../or-tools_VisualStudio2019-64bit_v9.1.9490/ortools-win32-x86-64-9.1.9490-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../or-tools_VisualStudio2019-64bit_v9.1.9490/ortools-java-9.1.9490.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../or-tools_VisualStudio2019-64bit_v9.1.9490/ortools-java-9.1.9490-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="ortools-win32-x86-64-9.1.9490" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:17-ea+11" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:win:17-ea+11" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:17-ea+11" level="project" />
@@ -89,5 +103,12 @@
     <orderEntry type="library" name="Maven: com.teamdev.jxbrowser:jxbrowser-mac:7.19" level="project" />
     <orderEntry type="library" name="Maven: com.teamdev.jxbrowser:jxbrowser-mac-arm:7.19" level="project" />
     <orderEntry type="library" name="Maven: com.teamdev.jxbrowser:jxbrowser-javafx:7.19" level="project" />
+    <orderEntry type="library" name="Maven: com.google.ortools:ortools-java:9.1.9490" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.ortools:ortools-linux-x86-64:9.1.9490" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.ortools:ortools-darwin-x86-64:9.1.9490" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.ortools:ortools-win32-x86-64:9.1.9490" level="project" />
+    <orderEntry type="library" name="Maven: net.java.dev.jna:jna-platform:5.8.0" level="project" />
+    <orderEntry type="library" name="Maven: net.java.dev.jna:jna:5.8.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.18.0" level="project" />
   </component>
 </module>
