@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.google.ortools:ortools-win32-x86-64:9.1.9490">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/ortools/ortools-win32-x86-64/9.1.9490/ortools-win32-x86-64-9.1.9490.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/ortools/ortools-win32-x86-64/9.1.9490/ortools-win32-x86-64-9.1.9490-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/ortools/ortools-win32-x86-64/9.1.9490/ortools-win32-x86-64-9.1.9490-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
