@@ -6,6 +6,9 @@ import com.google.ortools.constraintsolver.RoutingIndexManager;
 import com.google.ortools.constraintsolver.RoutingModel;
 import com.google.ortools.constraintsolver.RoutingSearchParameters;
 import com.google.ortools.constraintsolver.main;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.logging.Logger;
 
 
@@ -90,5 +93,8 @@ public class Tsp {
 
         // Print solution on console.
         printSolution(routing, manager, solution);
+
+
+
     }
 }

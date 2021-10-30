@@ -11,7 +11,11 @@ public class CargoController {
 
     @FXML
     TextField locationLatTF, locationLngTF, customerNameTF;
+    public int distanceMatrixJava[][];
 
+    public void printMatrix(){
+        System.out.println(distanceMatrixJava);
+    }
 
     public CargoController(){
 
@@ -28,6 +32,7 @@ public class CargoController {
     //To access this information from JavaScript
     @JsAccessible
     public void addCargo(ActionEvent event) {
+        printMatrix();
 
         try {
             PreparedStatement statement = Application.connection.prepareStatement("insert into cargos values('" + customerID + "', '" + customerNameTF.getText() + "' ,  '" + locationLatTF.getText() + "'  , '" + locationLngTF.getText() + "') ");

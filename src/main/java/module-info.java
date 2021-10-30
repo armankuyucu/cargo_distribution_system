@@ -13,6 +13,8 @@ module com.example.yazlab1_proje1 {
     requires jxbrowser;
     requires jxbrowser.javafx;
     requires ortools.java;
+    requires com.google.common;
+    requires json.simple;
 
     opens com.example.yazlab1_proje1 to javafx.fxml;
     exports com.example.yazlab1_proje1;
