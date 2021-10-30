@@ -65,13 +65,15 @@ function initMap() {
 
 }
 
+const distanceMatrix = [];
+
 function calcRoute() {
     //Create a directions service
     var directionsService = new google.maps.DirectionsService();
 
     //Create a DirectionsRenderer object which we will use to display the route
     var directionsDisplay = new google.maps.DirectionsRenderer();
-/*
+
     //API GET
     const data = {
         id: '01',
@@ -89,7 +91,7 @@ function calcRoute() {
     fetch(api_url, options);
 
     //API GET
-*/
+
 
     var waypoints = new Array();
 
@@ -121,7 +123,6 @@ function calcRoute() {
 }
 
 function getDistanceMatrix() {
-    var distanceMatrix = [];
     var distanceService = new google.maps.DistanceMatrixService();
     let counter2 = 0;
     distanceService.getDistanceMatrix({

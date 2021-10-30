@@ -32,17 +32,7 @@ function initMap() {
     //let locationLat = window.java.getLocationLatToJS();
 
 
-    //Create a directions service
-    var directionsService = new google.maps.DirectionsService();
-
-    //Create a DirectionsRenderer object which we will use to display the route
-    var directionsDisplay = new google.maps.DirectionsRenderer();
-
-    //bind the DirectionsRenderer to the map
-    directionsDisplay.setMap(map);
-
     let marker1, marker2, marker3, marker4;
-    let counter = 0;
 
     google.maps.event.addListener(map, 'rightclick', function (event) {
 
@@ -66,9 +56,8 @@ function initMap() {
             marker4 = event.latLng;
             getDistanceMatrix();
         }*/
-        markerArray[counter] = event.latLng;
+        markerArray.push(event.latLng);
         addMarker(event.latLng);
-        counter++;
         //alert(window.java.getLocationLngToJS() + ", " + windows.java.getLocationLatToJS());
     });
 
@@ -76,12 +65,51 @@ function initMap() {
 
 }
 
+const distanceMatrix = [];
+
 function calcRoute() {
-    var start = markerArray[0];
-    var end = markerArray[1];
+    //Create a directions service
+    var directionsService = new google.maps.DirectionsService();
+
+    //Create a DirectionsRenderer object which we will use to display the route
+    var directionsDisplay = new google.maps.DirectionsRenderer();
+
+    //API GET
+    const data = {
+        id: '01',
+        name: JSON.stringify(distanceMatrix),
+        route: ''
+    }
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    };
+    fetch(api_url, options);
+
+    //API GET
+
+
+    var waypoints = new Array();
+
+    //bind the DirectionsRenderer to the map
+    directionsDisplay.setMap(map);
+    for(i=1;i<markerArray.length-1;i++){
+        var adress = markerArray[i];
+        if(adress !== ""){
+            waypoints.push({
+                location: adress,
+                stopover: true
+            })
+        }
+    }
     var request = {
-        origin: start,
-        destination: end,
+        origin: markerArray[0],
+        destination: markerArray[markerArray.length-1],
+        waypoints: waypoints,//[{location: markerArray[2]},{location: markerArray[3]}],
         travelMode: google.maps.TravelMode.DRIVING
     };
     //Pass the request to the route method
@@ -95,7 +123,6 @@ function calcRoute() {
 }
 
 function getDistanceMatrix() {
-    var distanceMatrix = [];
     var distanceService = new google.maps.DistanceMatrixService();
     let counter2 = 0;
     distanceService.getDistanceMatrix({
